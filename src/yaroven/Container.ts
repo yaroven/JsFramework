@@ -1,8 +1,5 @@
 import "reflect-metadata";
 
-export const INJECTABLES = new Map();
-export const ModuleMetadata = new Map()
-
 export class Container {
 	private static instances = new Map();
 
@@ -17,10 +14,5 @@ export class Container {
 		this.instances.set(target, instance);
 		return instance;
 	}
-}
-export function Controller(): ClassDecorator {
-	return (target:any) => {
-		return Container.resolve(target);
-	};
 }
 
