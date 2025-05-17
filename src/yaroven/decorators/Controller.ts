@@ -6,6 +6,5 @@ export default function Controller(basePath = ""): ClassDecorator {
             if (route.target === target)
                 route.path = basePath + route.path
         })
-        console.log(routes)
     };
 }

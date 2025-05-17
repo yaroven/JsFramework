@@ -33,6 +33,3 @@ export class AppController {
 		res.end("WORK")
 	}
 }
-
-
-
