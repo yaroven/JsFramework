@@ -1,12 +1,12 @@
 import http, { IncomingMessage, ServerResponse } from "http";
 import url from "url";
 import { Container } from "./Container";
-import { ModuleMetadata } from "./decorators/Module";
-import { ExecutionContext } from "./ExecutionContext";
-import { getGuards } from "./getGuards";
-import { getInterceptors } from "./getInterceptors";
+import { ModuleMetadata } from "../decorators/Module";
+import { ExecutionContext } from "../interfaces/ExecutionContext";
+import { getGuards } from "../helpers/getGuards";
+import { getInterceptors } from "../helpers/getInterceptors";
 import { PARAMS_KEY } from "./config";
-import { ParameterDecoratorEnum } from "./enums/ParameterDecoratorsEnum";
+import { ParameterDecoratorEnum } from "../enums/ParameterDecoratorsEnum";
 
 export const routes: any[] = [];
 const controllerInstances = new Map<any, any>();
