@@ -1,16 +1,17 @@
 import "reflect-metadata";
 import Controller from "../../yaroven/decorators/Controller";
-import Get from "../../yaroven/decorators/GetDecorator";
-import Injectable from "../../yaroven/decorators/Injectable";
+import Get from "../../yaroven/decorators/Get";
+import Post from "../../yaroven/decorators/Post";
+import Put from "../../yaroven/decorators/Put";
+import Body from "../../yaroven/decorators/parameters/Body";
+import RawBody from "../../yaroven/decorators/parameters/RawBody";
 
-@Injectable()
 class LoggerService {
 	log(msg: string) {
 		console.log("[Logger]:", msg);
 	}
 }
 
-@Injectable()
 class UserService {
 	constructor(private logger: LoggerService) { }
 
@@ -19,17 +20,18 @@ class UserService {
 		return { id: 1, name: "Alice" };
 	}
 }
-@Injectable()
 @Controller()
 export class AppController {
 	constructor(private userService: UserService) { }
 	@Get("/hui")
-	run(req: any, res: any) {
-		const user = this.userService.getUser();
-		res.end("Hui")
+	run() {
+		return "Hui"
 	}
-	@Get("/work")
-	run2(req: any, res: any) {
-		res.end("WORK")
+	@Post("/work")
+	run2(@Body() body:any, @RawBody() RawBody:any) {
+		console.log("rawBody: ", RawBody)
+		console.log("body: ", body)
+
+		return body
 	}
 }

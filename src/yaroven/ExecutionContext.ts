@@ -1,5 +1,6 @@
 export interface ExecutionContext {
-    args: {},
+    request: any,
+    response: any,
     handler: Function,
     controller: any,
 }
