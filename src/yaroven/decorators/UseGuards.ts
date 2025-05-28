@@ -1,5 +1,5 @@
 import { Guard } from "../interfaces/Guard";
-import { GUARD_KEY } from "../config";
+import { GUARD_KEY } from "../core/config";
 export function useGuards(...guards: { new (...args: any[]): Guard }[]) {
   return (target: any, propertyKey?: any) => {
     if (propertyKey)

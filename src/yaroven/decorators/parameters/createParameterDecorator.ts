@@ -1,4 +1,4 @@
-import { PARAMS_KEY } from "../../config";
+import { PARAMS_KEY } from "../../core/config";
 
 export default function createParameterDecorator(type: string, key?: string) {
   return (

@@ -1,4 +1,4 @@
-import { INTERCEPTOR_KEY } from "./config";
+import { INTERCEPTOR_KEY } from "../core/config";
 
 export function getInterceptors(target: any, propertyKey: string) {
   const classInterceptors = Reflect.getMetadata(INTERCEPTOR_KEY, target) || [];

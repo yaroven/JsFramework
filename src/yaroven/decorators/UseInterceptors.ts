@@ -1,5 +1,5 @@
 import { Interceptor } from "../interfaces/Interceptor";
-import { INTERCEPTOR_KEY } from "../config";
+import { INTERCEPTOR_KEY } from "../core/config";
 
 export function useInterceptors(
   ...interceptors: { new (...args: any[]): Interceptor }[]

@@ -1,4 +1,4 @@
-import { GUARD_KEY } from "./config";
+import { GUARD_KEY } from "../core/config";
 
 export function getGuards(target: any, propertyKey: any) {
   const classGuards = Reflect.getMetadata(GUARD_KEY, target) || [];
