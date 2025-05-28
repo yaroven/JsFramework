@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import Controller from "../../yaroven/decorators/Controller";
-import Get from "../../yaroven/decorators/Get";
-import Post from "../../yaroven/decorators/Post";
+import Get from "../../yaroven/decorators/methods/Get";
+import Post from "../../yaroven/decorators/methods/Post";
 import Body from "../../yaroven/decorators/parameters/Body";
 import RawBody from "../../yaroven/decorators/parameters/RawBody";
 
@@ -27,10 +27,7 @@ export class AppController {
     return "Hui";
   }
   @Post("/work")
-  run2(@Body() body: any, @RawBody() RawBody: any) {
-    console.log("rawBody: ", RawBody);
-    console.log("body: ", body);
-
+  run2(@Body() body: any) {
     return body;
   }
 }

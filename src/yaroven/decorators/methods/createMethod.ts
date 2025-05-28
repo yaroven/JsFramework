@@ -1,9 +1,9 @@
-import { routes } from "../YarovenFactory";
+import { routes } from "../../YarovenFactory";
 
-export default function Delete(path = ""): MethodDecorator {
+export default function createMethod(method: string, path: string) {
   return (target: any, propertyKey: any) => {
     routes.push({
-      method: "DELETE",
+      method,
       path,
       handler: propertyKey,
       target: target.constructor,
