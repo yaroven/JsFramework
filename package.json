@@ -1,23 +1,23 @@
 {
-	"name": "yarovenjs",
-	"version": "1.0.0",
-	"main": "index.ts",
-	"scripts": {
-		"build": "tsc",
-		"start": "node dist/app.js",
-		"dev": "concurrently \"tsc --watch\" \"nodemon dist/app.js\""
-	},
-	"author": "",
-	"license": "ISC",
-	"description": "",
-	"devDependencies": {
-		"@types/node": "^22.15.18",
-		"concurrently": "^9.1.2",
-		"nodemon": "^3.1.10",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.8.3"
-	},
-	"dependencies": {
-		"reflect-metadata": "^0.2.2"
-	}
+  "name": "yarovenjs",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/app.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  }
 }
