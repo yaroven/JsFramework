@@ -1,5 +1,6 @@
+import { HttpMethods } from "../../enums/HttpMethods";
 import createMethod from "./createMethod";
 
 export default function Delete(path = ""): MethodDecorator {
-  return createMethod("POST", path);
+  return createMethod(HttpMethods.DELETE, path);
 }
